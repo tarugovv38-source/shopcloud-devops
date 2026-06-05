@@ -1,5 +1,14 @@
 # ShopCloud — E-Commerce Infrastructure on Linux
 
+## Aluno
+**Vitor Hugo Tavares**
+Sistemas de Informação — Unidavi
+
+## Tema
+Infraestrutura para um Pequeno E-Commerce 🛒
+
+## Descrição do Projeto
+
 Projeto desenvolvido como atividade prática da disciplina de **Cloud Computing** — Sistemas de Informação, Unidavi. Simula o ambiente operacional de um pequeno e-commerce hospedado em nuvem, com automação de rotinas DevOps via Shell Script.
 
 Um container Docker com Ubuntu Server é configurado com Apache para servir um site estático. Scripts Shell automatizam tarefas operacionais como atualização do sistema, backup, deploy, monitoramento, gerenciamento de usuários e geração de relatórios — reproduzindo rotinas reais de infraestrutura aplicadas a uma loja virtual, com estrutura de diretórios temática (`/app/ecommerce/produtos`, `/app/ecommerce/pedidos`, etc.), controle de permissões por perfil e logs de todas as execuções.

@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  ecommerce-linux:
+    build: .
+    container_name: trabalho03-linux
+    ports:
+      # Porta 8080 do host mapeada para porta 80 do Apache no container
+      - "8080:80"
+    volumes:
+      # Volume persistente: sincroniza a pasta local com o container
+      - ./scripts:/app/scripts
+      - ./source:/app/source
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+      - ./evidencias:/app/evidencias
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

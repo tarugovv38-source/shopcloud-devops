@@ -1,17 +1,8 @@
-# Trabalho 03 — Linux, Shell Script e Cloud Computing
+# ShopCloud — E-Commerce Infrastructure on Linux
 
-## Aluno
-**Vitor Hugo Tavares**
-Sistemas de Informação — Unidavi
+Projeto desenvolvido como atividade prática da disciplina de **Cloud Computing** — Sistemas de Informação, Unidavi. Simula o ambiente operacional de um pequeno e-commerce hospedado em nuvem, com automação de rotinas DevOps via Shell Script.
 
-## Tema
-**Infraestrutura para um Pequeno E-Commerce** 🛒
-
-## Descrição do Projeto
-
-Este projeto simula o ambiente operacional de um pequeno e-commerce hospedado em nuvem. Um container Docker com Ubuntu Server é configurado com Apache para servir um site estático, e scripts Shell automatizam tarefas operacionais como atualização do sistema, backup, deploy, monitoramento, gerenciamento de usuários e geração de relatórios.
-
-O ambiente reproduz rotinas reais de DevOps aplicadas a uma loja virtual, incluindo estrutura de diretórios temática (`/app/ecommerce/produtos`, `/app/ecommerce/pedidos`, etc.), controle de permissões por perfil (operações vs. leitura) e logs de todas as execuções.
+Um container Docker com Ubuntu Server é configurado com Apache para servir um site estático. Scripts Shell automatizam tarefas operacionais como atualização do sistema, backup, deploy, monitoramento, gerenciamento de usuários e geração de relatórios — reproduzindo rotinas reais de infraestrutura aplicadas a uma loja virtual, com estrutura de diretórios temática (`/app/ecommerce/produtos`, `/app/ecommerce/pedidos`, etc.), controle de permissões por perfil e logs de todas as execuções.
 
 ## Tecnologias Utilizadas
 
@@ -26,7 +17,7 @@ O ambiente reproduz rotinas reais de DevOps aplicadas a uma loja virtual, inclui
 ## Estrutura do Projeto
 
 ```
-trabalho03-cloud-shell/
+shopcloud-devops/
 ├── Dockerfile               # Imagem Ubuntu com Apache
 ├── docker-compose.yml       # Orquestração com volume persistente
 ├── README.md
@@ -56,8 +47,8 @@ trabalho03-cloud-shell/
 ### 1. Clonar o repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd trabalho03-cloud-shell
+git clone https://github.com/tarugovv38-source/shopcloud-devops.git
+cd shopcloud-devops
 ```
 
 ### 2. Subir o ambiente Docker
@@ -174,17 +165,17 @@ Consulte a pasta [`evidencias/`](./evidencias/) para prints de:
 
 ## DockerHub
 
-```
-docker pull <SEU_USUARIO_DOCKERHUB>/shopcloud-ecommerce:latest
+```bash
+docker pull vitorunidavi/shopcloud-ecommerce:latest
 ```
 
-> Link: https://hub.docker.com/r/<SEU_USUARIO_DOCKERHUB>/shopcloud-ecommerce
+> Link: https://hub.docker.com/r/vitorunidavi/shopcloud-ecommerce
 
 ## Uso de IA
 
-Este trabalho foi desenvolvido com apoio do Claude (Anthropic) para estruturação e revisão dos scripts Shell. A IA auxiliou na organização da estrutura de arquivos, sugestão de boas práticas de Shell Script (uso de funções, validações, comentários) e formatação do README.
+Este projeto foi desenvolvido com apoio do Claude (Anthropic) para estruturação e revisão dos scripts Shell. A IA auxiliou na organização da estrutura de arquivos, sugestão de boas práticas de Shell Script (uso de funções, validações, comentários) e formatação do README.
 
-Todo o conteúdo foi revisado, adaptado ao tema e-commerce e compreendido pelo aluno. Ajustes manuais foram feitos para adequar os scripts ao ambiente Docker (uso de `service` ao invés de `systemctl`, adaptações de paths, etc.).
+Todo o conteúdo foi revisado, adaptado ao tema e-commerce e compreendido pelo autor. Ajustes manuais foram feitos para adequar os scripts ao ambiente Docker (uso de `service` ao invés de `systemctl`, adaptações de paths, etc.).
 
 ## Dificuldades Encontradas
 

@@ -36,4 +36,4 @@ RUN chmod +x /app/scripts/*.sh
 EXPOSE 80
 
 # Mantém o container rodando e inicia o Apache
-CMD ["bash", "-c", "service apache2 start && tail -f /dev/null"]
+CMD ["apachectl", "-D", "FOREGROUND"]
